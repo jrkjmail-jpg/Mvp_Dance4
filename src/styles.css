@@ -383,3 +383,193 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* Social profiles and functional states */
+.notification-button { position: relative; }
+.notification-button i { position: absolute; right: 3px; top: 3px; width: 8px; height: 8px; border-radius: 50%; background: var(--orange); border: 2px solid var(--paper); }
+.profile-chip span, .studio-logo, .big-avatar, .avatar-editor, .logo-editor { background-position: center; background-size: cover; background-repeat: no-repeat; }
+.studio-hero.has-cover { background-position: center; background-size: cover; }
+.studio-meta h1 { max-width: 920px; }
+.studio-logo { position: relative; border: 0; text-align: center; line-height: .9; }
+.studio-logo i { position: absolute; right: -3px; bottom: 2px; width: 27px; height: 27px; display: grid; place-items: center; border-radius: 50%; background: white; color: var(--ink); border: 2px solid var(--ink); opacity: 0; transition: .2s; }
+.studio-logo:hover i { opacity: 1; }
+.studio-description { max-width: 530px; }
+.studio-description p { margin: 0 0 9px; color: rgba(255,255,255,.82); line-height: 1.55; font-size: .88rem; }
+.studio-description span { color: var(--acid); font-size: .67rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+.studio-social-actions { position: absolute; z-index: 3; right: 4vw; top: 30px; display: flex; gap: 7px; }
+.studio-social-actions button { min-height: 38px; padding: 0 13px; display: flex; align-items: center; gap: 7px; border: 1px solid rgba(255,255,255,.28); background: rgba(0,0,0,.28); backdrop-filter: blur(8px); color: white; font-size: .62rem; font-weight: 800; text-transform: uppercase; }
+.studio-social-actions button:hover { background: white; color: var(--ink); }
+.studio-tabs { display: flex; gap: 28px; margin: -25px 0 68px; padding-bottom: 15px; border-bottom: 1px solid var(--line); }
+.studio-tabs button { padding: 0 0 7px; border: 0; border-bottom: 2px solid transparent; background: transparent; font-size: .69rem; font-weight: 800; text-transform: uppercase; }
+.studio-tabs button.active { border-color: var(--ink); }
+.summary-kpi { border: 0; background: transparent; color: white; text-align: left; cursor: pointer; }
+.summary-kpi:hover b, .summary-kpi:hover svg { color: var(--acid); }
+.student-tools { display: flex; align-items: center; gap: 9px; }
+.search-field { height: 48px; min-width: 210px; padding: 0 13px; border: 1px solid var(--ink); display: flex; align-items: center; gap: 8px; }
+.search-field input { width: 100%; border: 0; background: transparent; outline: none; font-size: .72rem; }
+.student-tools select { height: 48px; padding: 0 30px 0 13px; border: 1px solid var(--ink); background: transparent; font-size: .7rem; font-weight: 700; }
+.student-row { width: 100%; border-left: 0; border-right: 0; border-top: 0; background: transparent; text-align: left; color: inherit; }
+.student-row:hover { background: white; padding-left: 10px; }
+
+.student-profile-hero { max-width: 1600px; margin: auto; padding: 32px 4vw 0; }
+.profile-cover-art { height: 245px; position: relative; overflow: hidden; background: var(--blue); }
+.profile-cover-art::before { content: ''; position: absolute; inset: 0; background: linear-gradient(115deg, rgba(0,0,0,.05), rgba(0,0,0,.23)), linear-gradient(rgba(17,17,15,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(17,17,15,.08) 1px, transparent 1px); background-size: auto, 48px 48px, 48px 48px; }
+.profile-cover-art > span { position: absolute; left: 25px; top: 20px; z-index: 2; font-family: 'Unbounded'; font-size: 3.5rem; font-weight: 900; letter-spacing: -.08em; color: rgba(17,17,15,.14); }
+.profile-cover-figure { position: absolute; right: 15%; top: -30px; width: 140px; height: 310px; border-radius: 50% 50% 20% 20%; background: var(--ink); transform: rotate(-8deg); box-shadow: -100px 75px 0 -73px var(--ink), 112px 5px 0 -77px var(--ink); }
+.student-profile-main { min-height: 240px; display: grid; grid-template-columns: 190px 1fr auto; gap: 28px; align-items: end; padding: 0 0 33px; border-bottom: 1px solid var(--ink); }
+.big-avatar { width: 170px; height: 170px; margin-top: -68px; position: relative; z-index: 3; border: 9px solid var(--paper); border-radius: 50%; display: grid; place-items: center; background-color: var(--acid); font-family: 'Unbounded'; font-size: 2.6rem; font-weight: 900; }
+.student-identity h1 { margin: 0; font-family: 'Unbounded'; font-size: clamp(3.3rem, 6vw, 7rem); line-height: .77; letter-spacing: -.08em; }
+.identity-meta { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 17px; }
+.identity-meta span { display: flex; align-items: center; gap: 5px; font-size: .68rem; font-weight: 800; text-transform: uppercase; }
+.profile-actions { display: flex; gap: 8px; padding-bottom: 8px; }
+.profile-bio-row { min-height: 130px; padding: 25px 0; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 45px; align-items: center; border-bottom: 1px solid var(--line); }
+.profile-bio-row > p { margin: 0; color: #5e5d56; line-height: 1.6; }
+.profile-bio-row > div { display: flex; flex-direction: column; gap: 7px; }
+.profile-bio-row span { font-size: .58rem; font-weight: 800; letter-spacing: .1em; }
+.profile-bio-row b, .profile-bio-row button { font-size: .76rem; }
+.profile-bio-row button { width: fit-content; border: 0; background: transparent; padding: 0; display: flex; align-items: center; gap: 7px; font-weight: 800; }
+.student-profile-tabs { display: flex; gap: 0; border-bottom: 1px solid var(--ink); }
+.student-profile-tabs button { padding: 18px 30px; border: 0; background: transparent; font-size: .68rem; font-weight: 800; text-transform: uppercase; }
+.student-profile-tabs button.active { background: var(--ink); color: white; }
+.profile-overview { max-width: 1600px; margin: auto; padding: 62px 4vw; display: grid; grid-template-columns: .9fr 1.5fr; gap: 18px; }
+.level-card { min-height: 270px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; background: var(--orange); }
+.level-number { display: flex; justify-content: space-between; align-items: flex-start; }
+.level-number span { font-size: .62rem; font-weight: 900; }
+.level-number b { font-family: 'Unbounded'; font-size: 7rem; line-height: .7; letter-spacing: -.12em; }
+.level-card h2 { margin: 0 0 14px; font-family: 'Unbounded'; font-size: 1.5rem; letter-spacing: -.05em; }
+.level-card p { margin: 12px 0 0; font-size: .7rem; }
+.level-line { height: 5px; background: rgba(0,0,0,.2); }
+.level-line i { display: block; width: 80%; height: 100%; background: var(--ink); }
+.social-stat-grid { display: grid; grid-template-columns: 1fr 1fr; border-left: 1px solid var(--ink); border-top: 1px solid var(--ink); }
+.social-stat-grid button { padding: 23px; min-height: 126px; display: grid; grid-template-columns: auto 1fr; grid-template-rows: 1fr auto; border: 0; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); background: transparent; text-align: left; }
+.social-stat-grid button:hover { background: white; }
+.social-stat-grid svg { width: 30px; height: 30px; padding: 6px; border-radius: 50%; background: var(--acid); }
+.social-stat-grid b { justify-self: end; font-family: 'Unbounded'; font-size: 2.8rem; letter-spacing: -.09em; }
+.social-stat-grid span { grid-column: 1 / -1; font-size: .61rem; font-weight: 800; text-transform: uppercase; }
+
+.section-heading.compact { margin-bottom: 38px; }
+.activity-section, .achievements-section { max-width: 1600px; margin: auto; padding: 65px 4vw 100px; }
+.activity-layout { display: grid; grid-template-columns: 1.6fr .7fr; gap: 18px; }
+.activity-feed { display: flex; flex-direction: column; gap: 18px; }
+.activity-post { padding: 28px; border: 1px solid var(--ink); background: white; }
+.post-author { display: flex; align-items: center; gap: 12px; }
+.post-author > span { width: 48px; height: 48px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 50%; background: var(--acid); font-size: .68rem; font-weight: 900; }
+.post-author > div { display: flex; flex-direction: column; }
+.post-author small { color: #777; font-size: .62rem; }
+.post-author > button { margin-left: auto; border: 0; background: transparent; }
+.post-score { min-height: 230px; margin: 25px 0; padding: 25px; background: var(--ink); color: white; display: grid; grid-template-columns: 1fr auto; align-items: end; }
+.post-score b { grid-column: 1 / -1; font-family: 'Unbounded'; font-size: clamp(5rem, 11vw, 10rem); color: var(--orange); letter-spacing: -.12em; line-height: .8; }
+.post-score span { font-family: 'Unbounded'; font-size: 1.2rem; }
+.post-score i { color: var(--acid); font-style: normal; letter-spacing: .15em; }
+.activity-post > p { line-height: 1.65; color: #555; }
+.post-actions { display: flex; gap: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
+.post-actions button { border: 0; background: transparent; display: flex; align-items: center; gap: 6px; font-size: .72rem; font-weight: 800; }
+.compact-post { background: var(--acid); }
+.compact-post h3 { margin: 40px 0 15px; max-width: 650px; font-family: 'Unbounded'; font-size: clamp(2rem, 4vw, 4.8rem); line-height: .85; letter-spacing: -.07em; }
+.studio-post-logo { background: var(--ink) !important; color: white; font-family: 'Unbounded'; }
+.activity-aside { height: fit-content; padding: 30px; position: sticky; top: 25px; background: var(--blue); display: flex; flex-direction: column; }
+.activity-aside b { margin-top: 25px; font-family: 'Unbounded'; font-size: 4rem; line-height: .8; letter-spacing: -.08em; }
+.activity-aside span { padding-bottom: 20px; border-bottom: 1px solid rgba(0,0,0,.22); font-size: .63rem; font-weight: 800; text-transform: uppercase; }
+.achievements-section .section-heading > span { font-family: 'Unbounded'; font-size: .8rem; }
+.achievement-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-left: 1px solid var(--ink); border-top: 1px solid var(--ink); }
+.achievement-grid button { min-height: 220px; padding: 25px; border: 0; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); background: #dedbd2; text-align: left; opacity: .55; }
+.achievement-grid button.unlocked { background: white; opacity: 1; }
+.achievement-grid button:hover { background: var(--acid); opacity: 1; }
+.achievement-grid button > span { width: 76px; height: 76px; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--ink); font-family: 'Unbounded'; font-size: 1.6rem; font-weight: 900; }
+.achievement-grid h3 { margin: 32px 0 5px; font-family: 'Unbounded'; font-size: 1.35rem; letter-spacing: -.05em; }
+.achievement-grid p { margin: 0; color: #666; font-size: .7rem; }
+
+.modal > form > h2 { margin-top: 0; }
+.wide-modal { width: min(850px, 100%); }
+.image-edit-grid { display: grid; grid-template-columns: 1fr 145px; gap: 15px; margin-bottom: 30px; }
+.cover-editor { min-height: 170px; border: 1px solid var(--ink); background: var(--ink); color: white; background-size: cover; background-position: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; font-size: .65rem; font-weight: 800; text-transform: uppercase; }
+.logo-editor { position: relative; border: 1px solid var(--ink); font-family: 'Unbounded'; font-size: 1.4rem; font-weight: 900; background-size: cover; background-position: center; }
+.logo-editor i { position: absolute; right: 8px; bottom: 8px; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--ink); color: white; }
+.color-row { display: flex; gap: 9px; }
+.color-row button { width: 38px; height: 38px; border: 1px solid var(--ink); border-radius: 50%; }
+.color-row button.active { outline: 3px solid var(--ink); outline-offset: 3px; }
+.avatar-editor { width: 130px; height: 130px; margin: -5px 0 30px; position: relative; border: 1px solid var(--ink); border-radius: 50%; background-color: var(--blue); display: grid; place-items: center; font-family: 'Unbounded'; font-size: 2rem; font-weight: 900; }
+.avatar-editor i { position: absolute; right: 0; bottom: 5px; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; background: var(--ink); color: white; }
+.side-modal { width: min(600px, 100%); }
+.notification-list { border-top: 1px solid var(--ink); }
+.notification-list button { width: 100%; padding: 18px 0; border: 0; border-bottom: 1px solid var(--line); background: transparent; display: grid; grid-template-columns: 10px 1fr auto; gap: 12px; align-items: start; text-align: left; }
+.notification-list button > i { width: 8px; height: 8px; margin-top: 6px; border-radius: 50%; background: var(--orange); }
+.notification-list button.read { opacity: .55; }
+.notification-list button.read > i { background: transparent; }
+.notification-list button > div { display: flex; flex-direction: column; }
+.notification-list button span, .notification-list button small { color: #777; font-size: .65rem; }
+.notification-read-all { margin-top: 24px; }
+.detail-avatar { width: 94px; height: 94px; margin-bottom: 25px; border-radius: 50%; display: grid; place-items: center; background: var(--blue); font-family: 'Unbounded'; font-size: 1.4rem; font-weight: 900; }
+.student-detail-modal h2 { margin-bottom: 10px; }
+.detail-tag { color: #777; }
+.detail-score-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 30px; border: 1px solid var(--ink); }
+.detail-score-grid div { min-height: 110px; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; border-right: 1px solid var(--ink); }
+.detail-score-grid div:last-child { border: 0; }
+.detail-score-grid span { font-size: .58rem; text-transform: uppercase; }
+.detail-score-grid b { font-family: 'Unbounded'; font-size: 1.25rem; }
+.detail-activity { padding: 25px 0; border-bottom: 1px solid var(--line); }
+.detail-activity p { margin: 0 0 6px; font-size: .6rem; text-transform: uppercase; }
+.share-preview { min-height: 210px; padding: 25px; background: var(--acid); display: flex; align-items: center; gap: 28px; }
+.share-preview > div { display: flex; flex-direction: column; gap: 8px; }
+.share-preview span { font-size: .63rem; font-weight: 800; text-transform: uppercase; }
+.share-preview b { font-family: 'Unbounded'; font-size: 1rem; word-break: break-all; }
+.share-buttons { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 15px; border-left: 1px solid var(--ink); border-top: 1px solid var(--ink); }
+.share-buttons button { min-height: 100px; padding: 12px; border: 0; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); background: transparent; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; font-size: .6rem; font-weight: 800; text-transform: uppercase; }
+.share-buttons button:hover { background: white; }
+.action-list { border-top: 1px solid var(--ink); }
+.action-list button { width: 100%; min-height: 65px; padding: 0 5px; border: 0; border-bottom: 1px solid var(--line); background: transparent; display: flex; justify-content: space-between; align-items: center; text-align: left; font-size: .76rem; font-weight: 800; }
+.action-list button:hover { padding-left: 15px; background: var(--acid); }
+.camera-preview { color: white; text-align: left; border-radius: 0; }
+
+@media (max-width: 1000px) {
+  .studio-social-actions { top: auto; bottom: 95px; }
+  .hero-links span:nth-child(2) { display: none; }
+  .student-profile-main { grid-template-columns: 150px 1fr; }
+  .big-avatar { width: 140px; height: 140px; }
+  .profile-actions { grid-column: 1 / -1; }
+  .profile-overview, .activity-layout { grid-template-columns: 1fr; }
+  .activity-aside { position: static; display: grid; grid-template-columns: repeat(3, 1fr); }
+  .activity-aside .eyebrow { grid-column: 1 / -1; }
+  .achievement-grid { grid-template-columns: 1fr 1fr; }
+  .student-tools { flex-wrap: wrap; justify-content: flex-end; }
+}
+
+@media (max-width: 760px) {
+  .studio-social-actions { position: static; margin-top: 25px; flex-wrap: wrap; }
+  .studio-social-actions button { flex: 1; justify-content: center; }
+  .studio-description { max-width: 100%; }
+  .studio-tabs { overflow-x: auto; margin-bottom: 45px; }
+  .studio-tabs button { white-space: nowrap; }
+  .student-tools { width: 100%; justify-content: stretch; }
+  .search-field { min-width: 100%; }
+  .student-tools select, .student-tools .button { flex: 1; }
+  .student-profile-hero { padding: 18px 20px 0; }
+  .profile-cover-art { height: 165px; }
+  .profile-cover-art > span { font-size: 2.2rem; }
+  .profile-cover-figure { right: 5%; transform: scale(.75) rotate(-8deg); transform-origin: top; }
+  .student-profile-main { grid-template-columns: 100px 1fr; gap: 15px; padding-bottom: 22px; }
+  .big-avatar { width: 100px; height: 100px; margin-top: -45px; border-width: 6px; font-size: 1.5rem; }
+  .student-identity h1 { font-size: 2.45rem; }
+  .student-identity .eyebrow { display: none; }
+  .identity-meta { gap: 8px; margin-top: 12px; }
+  .identity-meta span { font-size: .57rem; }
+  .profile-actions { width: 100%; }
+  .profile-actions .button { flex: 1; padding: 0 10px; }
+  .profile-bio-row { grid-template-columns: 1fr; gap: 18px; }
+  .student-profile-tabs { overflow-x: auto; }
+  .student-profile-tabs button { padding: 16px 20px; white-space: nowrap; }
+  .profile-overview { padding: 40px 20px; }
+  .level-number b { font-size: 5.5rem; }
+  .social-stat-grid b { font-size: 2rem; }
+  .activity-section, .achievements-section { padding: 50px 20px 80px; }
+  .post-score { min-height: 190px; }
+  .activity-aside { grid-template-columns: 1fr; }
+  .achievement-grid { grid-template-columns: 1fr; }
+  .image-edit-grid { grid-template-columns: 1fr; }
+  .logo-editor { width: 120px; height: 120px; }
+  .detail-score-grid { grid-template-columns: 1fr; }
+  .detail-score-grid div { min-height: 75px; border-right: 0; border-bottom: 1px solid var(--ink); }
+  .share-preview { flex-direction: column; text-align: center; }
+  .share-buttons { grid-template-columns: 1fr; }
+  .share-buttons button { min-height: 70px; flex-direction: row; }
+}
